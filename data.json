@@ -1,0 +1,38 @@
+{
+  "LoginVideos": [
+    {
+      "title": "How to Log In to Your Student Portal",
+      "description": "A quick guide on how to log in to your student portal and access all your academic resources.",
+      "src": "https://i.ytimg.com/vi/4pX9b0k1b2g/hqdefault.jpg",
+      "href": "https://www.snhu.edu/student-portal"
+    },
+    {
+      "title": "Navigating Brightspace",
+      "description": "Learn how to navigate your online learning environment effectively.",
+      "src": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+      "href": "https://learn.snhu.edu"
+    },
+    {
+      "title": "Accessing Your Email",
+      "description": "Step-by-step instructions for accessing your SNHU student email account.",
+      "src": "https://i.ytimg.com/vi/oHg5SJYRHA0/hqdefault.jpg",
+      "href": "https://mail.snhu.edu"
+    }
+  ],
+  "section2": [ 
+    {
+      "title": "Financial Aid Overview",
+      "description": "Understanding your financial aid options and how to apply.",
+      "src": "https://i.ytimg.com/vi/2vjPBrBU-TM/hqdefault.jpg",
+      "href": "https://www.snhu.edu/financial-aid"
+    }
+  ],
+  "section3": [
+    {
+      "title": "Academic Resources",
+      "description": "Discover the academic support resources available to you.",
+      "src": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      "href": "https://www.snhu.edu/academic-support"
+    }
+  ]
+}

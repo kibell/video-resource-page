@@ -1,84 +1,59 @@
 <!doctype html>
 <html lang="en">
- <!-- First Name Amp 
-  %%[
-  var @contact 
-  set @contact = QueryParameter('SFID')
-  var @subscriberRows
 
-set @subscriberRows = RetrieveSalesforceObjects(
-   "Contact",
-   "FirstName, Academic_Advisor_Name__c, SNHU_Email__c",
-   "Id", "=", @contact )
-
-if RowCount(@subscriberRows) == 1 then /* there should only be one row */
-  var @subscriberRow, @FirstName, @Propercasefirstname, @AdvisorName
-  set @subscriberRow = Row(@subscriberRows, 1)
-  set @firstName = Field(@subscriberRow, "FirstName")
- set @propercasefirstname = Propercase(@firstname)
- set @AdvisorName = Field(@subscriberRow, "Academic_Advisor_Name__c")
- set @SNHUEmail = Field(@subscriberRow, "SNHU_Email__c")
-
-ENDIF
-
-Var @preferred_first_name__C
-
-set @preferred_first_name__C = Lookup("ENT.Unify-Contacts-PFN-Clean","Preferred_First_Name__c","id", @contact)
- 
-var @firstnamecombo
-Set @firstnamecombo = @preferred_first_name__C
-IF(EMPTY(@preferred_first_name__C))
-THEN
-Set @firstnamecombo = @firstname
-ENDIF
-  ]%%
--->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="ROBOTS" content="INDEX,FOLLOW">
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Starter Template </title>
+  <title> SNHU Video Library </title>
+  <!-- Add Vidyard specific script for dynamic loading -->
+  <script async src="https://play.vidyard.com/embed/v4.js"></script>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://www.snhu.edu/assets/SNHU/images/common/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="https://www.snhu.edu/assets/SNHU/images/common/favicon.ico" type="image/x-icon" />
   <link
-    href="https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=dc32c8645b2385d544026180d37a5a70eef875e5"
-    rel="stylesheet" type="text/css" />
-  <link href="https://snhu.tfaforms.net/uploads/themes/theme-31.css" rel="stylesheet" type="text/css" />
-  <link
-    href="https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=dc32c8645b2385d544026180d37a5a70eef875e5"
-    rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
   <style>
 
   </style>
-
+  <!--[if lt IE 9]>
+        <script src="https://www.snhu.edu/assets/SNHU/js/polyfill/respond.min.js"></script>
+    <![endif]-->
   <link rel="stylesheet" type="text/css" href="DateTimePicker.css" />
 
   <script type="text/javascript" src="DateTimePicker.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-
-
-
+  <!--[if lt IE 9]>
+   <link rel="stylesheet" type="text/css" href="DateTimePicker-ltie9.css" />
+   <script type="text/javascript" src="DateTimePicker-ltie9.js"></script>
+  <![endif]-->
   <!-- FORM: HEAD SECTION -->
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="referrer" content="no-referrer-when-downgrade">
 
+
+  <link
+    href="https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=dc32c8645b2385d544026180d37a5a70eef875e5"
+    rel="stylesheet" type="text/css" />
+
+  <link href="https://snhu.tfaforms.net/uploads/themes/theme-31.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=dc32c8645b2385d544026180d37a5a70eef875e5"
+    rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
   <script type="text/javascript"
     src="https://snhu.tfaforms.net/wForms/3.11/js/wforms.js?v=dc32c8645b2385d544026180d37a5a70eef875e5"></script>
   <script type="text/javascript">
@@ -90,49 +65,43 @@ ENDIF
 
   <!-- END FORM: HEAD SECTION -->
 
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NXPNK9L4W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4NXPNK9L4W');
-</script>
-
-<!-- Hotjar Tracking Code for SNHU Properties -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2360018,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
 </head>
 
 
 <body>
 
-  <!-- Header + Nav -->
+  <!-- <section class="sidebar-section col-md-2">
+      <div class="sidebar">
+          <img
+              src="https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png"
+              alt="SNHU Logo" height="80" class="mb-3 mt-3">
 
+          <h2 class="ms-2 sky-blue">Quick Links</h2>
+          <ul class="sidebar-nav mt-1">
+              <li><a>SNHU Homepage </a></li>
+              <li class=" ms-3"><a>Affordabiltiy</a></li>
+              <li class=" ms-3"><a>Transfer Credits</a></li>
+              <li class=" ms-3"><a>Military</a></li>
+              <li class=" ms-3"><a>Accreditaion</a></li>
+              <li><a>Student Financial Services </a></li>
+              <li><a>Shapiro Library</a></li>
+          </ul>
+      </div>
+  </section> -->
   <header>
-    <nav class="navbar navbar-expand-lg p-3">
+    <nav class="navbar navbar-expand-lg p-3 sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="https://www.snhu.edu/">
+        <a class="navbar-brand" href="https://www.snhu.edu/" target="_blank">
           <img
             src="https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png"
             alt="SNHU Logo" height="80">
         </a>
         <div class=" justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a href="Tel:8883870861" class="nav-link head-link mx-3 " target="_blank">Call</a>
-            <a href="sms:21216" class="nav-link head-link mx-3" target="_blank">Text</a>
-            <a href="mailto:admissions@snhu.edu" class="nav-link head-link mx-3" target="_blank">Email</a>
+            <a href="mailto:admission@snhu.edu" class="nav-link head-link mx-3" target="_blank">Text</a>
+
+            <a href="tel:6036459611" class="nav-link head-link mx-3 " target="_blank">Call</a>
+            <a href="mailto:admission@snhu.edu" class="nav-link head-link mx-3" target="_blank">Email</a>
 
           </div>
         </div>
@@ -140,51 +109,335 @@ ENDIF
     </nav>
   </header>
 
-  <!---Meet the New SNHU Term Names-->
-
-  <div class="meet-div text-center d-flex justify-content-center align-items-center">
-  </div>
-
-  <!--Accreditation-->
-
-  <div role="region" aria-label="Accreditations" class="container-fluid align-items-center text-center py-5 bg-light accreditation">
-    <img class="col-10 col-xxl-6"
-      src="https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/da987c7f-9fd4-420f-a9ac-3b64535744f8.png"
-      alt="SNHU accreditation logos" width="100%" height="auto">
-  </div>
-
-   <!--Footer-->
-
-   <footer class="py-5">
-    <div class="container-fluid">
+  <section class="hero d-flex align-items-center ">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <p class="" style="color:#fff"> <strong>SNHU Admission</strong><br>
-            55 S. Commercial Street
-            <br> Manchester, NH 03106
+        <div class="col-md-6 welcome">
+          <h1 class="text-white welcome-message">“So that’s how I do it!” </span></h1>
+          <p class="text-white">Welcome to the SNHU online student video library.
             <br>
-            <a href="Tel:8883870864" class="text-link">888.387.0864</a>
-            <br>
-            <a href="mailto:admissions@snhu.edu" class="text-link primary-link"> admissions@snhu.edu </a>
-        </div>
-
-        <div class="col-md-4 d-flex justify-content-center align-items-center my-3">
-          <a href="https://www.snhu.edu/" target="_blank"
-          class="link-dark text-decoration-none">
-          <img
-            src="https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png"
-            height="80" alt="SNHU logo">
-        </a>
-        </div>
-
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <p  style="color: #fff;">
-            © %%=FormatDate(Now(), "yyyy")=%%<br>
-            Southern New Hampshire University<br>
-            View our <a href="https://www.snhu.edu/privacy-policy" class="text-link primary-link">Privacy Policy</a> | <a
-              href="https://www.snhu.edu/about-us/accessibility" class="text-link primary-link">Accessibility at SNHU</a>
+            Browse by category or search by keyword.
           </p>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
+
+    <div style="position: relative;" class="align-items-center d-flex justify-content-center">
+        <input style="width: 500px; border-radius: 5px;  
+                      background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 8px center;
+                      background-size: 16px 16px;
+                      padding-left: 40px;" type="text" id="searchInput" class="search-on py-2 mt-5" oninput="filterData(this.value)"
+          placeholder="Search">
+      </div>
+
+  <section class="video-content col-md-12" >
+    <div class="">
+
+
+    
+
+
+      <!-- <div class="mt-5 col-md-12 d-flex justify-content-center input-group" id="buttonContainer">
+        <button type="button" class="btn btn-primary active" onclick="filterData(this.value)" value=""> All </button>
+        <button type="button" class="btn btn-primary " onclick="filterData(this.value)" value="Accepted Next Steps">
+          Accepted
+        </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Amazon"> Amazon
+        </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Commission">
+          Commissionable </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="FAFSA"> FAFSA </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Financial Aid"> Financial
+          Aid </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="First Term"> First Term
+        </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Earn Your Degree"> Earn
+          your Degree </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Survey"> Survey </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Pre-Orientation">
+          Pre-Orientation </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="SFS"> SFS </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="ViewBook"> UC ViewBook
+        </button>
+        <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Campus Events"> Campus
+          Events </button>
+
+      </div> -->
+
+      <!----Log in -->
+      <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2>How to Log In</h2>
+          </div>
+        </div>
+        <div class="row" id="loginGallery">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+</section>
+
+    <!---Books and Course materials-->  
+<section class="bg-lightgray py-5">
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2>Books and Course Materials</h2>
+          </div>
+        </div>
+        <div class="row" id="CourseGallery">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+      </section>
+
+       <!---Planning, Studying and Success-->  
+<section class=" py-5">
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2>Planning, Studying and Success</h2>
+          </div>
+        </div>
+        <div class="row" id="PlanningGallery">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+      </section>
+
+      
+       <!---Tutoring and Support Teams-->  
+<section class="bg-lightgray py-5">
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2>Tutoring and Support Teams</h2>
+          </div>
+        </div>
+        <div class="row" id="TutoringGallery">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+      </section>
+    </div>
+    </div>  
+  </section>
+  
+  <script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+  <script>
+    // Inline JSON data for videos
+    const videoData = {
+      LoginVideos: [
+        {
+          title: "How to set (and reset) your SNHU single sign-on password",
+          description: "When you receive the email with your single sign-on username, the first thing to do is to create your password by clicking the link to the SNHU password reset page.",
+          src: "https://play.vidyard.com/ztt6T1BwZLg632fyJwzpER.jpg",
+          id: "ztt6T1BwZLg632fyJwzpER",
+          href: "https://www.snhu.edu/student-portal",
+           buttonTitle: "Set Password"
+        },
+        {
+          title: "How to log in to mySNHU",
+          description: "Once you’re registered as a student at SNHU, you’ll receive access to my.snhu.edu — often referred to as “mySNHU.” Think of mySNHU as your virtual SNHU campus. Here you’ll find links to the Brightspace learning platform, academic support and tutoring, and important information and contacts.",
+          src: "https://play.vidyard.com/Q7nvsTXQQ55tNPBXGA14zE.jpg",
+          id: "Q7nvsTXQQ55tNPBXGA14zE",
+          href: "https://learn.snhu.edu",
+           buttonTitle: "Go to mySNHU"
+        },
+        {
+          title: "How to log into the SNHU financial aid forms portal",
+          description: "If SNHU is asked to obtain additional information to help determine your Federal Student Aid eligibility, our Student Financial Services team will send you an email inviting you to log in to the SNHU financial aid forms portal.",
+          src: "https://play.vidyard.com/szdxpWPFJVMcNy9zCwr8a1.jpg",
+          id: "szdxpWPFJVMcNy9zCwr8a1",
+          href: "https://www.snhu.edu",
+           buttonTitle: "Go to mySNHU"
+        },
+          {
+          title: "How to log in to your SNHU webmail",
+          description: "If you’ve been asked to access your webmail prior to registering for classes, you can do so by visiting SSO-MAIL.SNHU.EDU and entering your single sign-on username and password.",
+          src: "https://play.vidyard.com/DB2WTW8nZpJUFKT7bUmqRk.jpg",
+          id: "DB2WTW8nZpJUFKT7bUmqRk",
+          href: "https://www.snhu.edu",
+          buttonTitle: "Go to mySNHU"
+        },
+         {
+          title: "How to log in to SNHU Brightspace learning platform",
+          description: "The SNHU Brightspace learning platform is where you’ll find, complete and submit your assignments. You’ll also have access to free academic support and tutoring.",
+          src: "https://play.vidyard.com/RCRgrDktyvxmtEeNPLc8LU.jpg",
+          id: "RCRgrDktyvxmtEeNPLc8LU",
+          href: "https://www.snhu.edu",
+          buttonTitle: "Go to mySNHU"
+        },
+      
+      ],
+      CourseVideos: [
+
+       {
+          title: "How do I buy my books?",
+          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
+          src: "https://play.vidyard.com/1Z5dKCDBufkMwJT2K5Gh4R.jpg",
+          id: "1Z5dKCDBufkMwJT2K5Gh4R",
+          href: "https://www.snhu.edu/student-portal",
+           buttonTitle: "Go to Bookstore"
+        },
+         {
+          title: "Where Are My E-Books (Ask Abby!)",
+          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
+          src: "https://play.vidyard.com/pQvQJwMGPFAtzK7LnoXRfW.jpg",
+          id: "pQvQJwMGPFAtzK7LnoXRfW",
+          href: "https://www.snhu.edu/student-portal",
+           buttonTitle: "Go to Bookstore"
+        },
+
+        {
+          title: "Special course materials and software",
+          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
+          src: "https://play.vidyard.com/oDwUqFeYcjUFEmH6Nc2Bgo.jpg",
+          id: "oDwUqFeYcjUFEmH6Nc2Bgo",
+          href: "https://www.snhu.edu/student-portal",
+           buttonTitle: "Go to Bookstore"
+        },
+        
+      ],
+      PlanningVideos: [
+        {
+          title: "Five Techniques for Crushing Discussion Assignments",
+          description: "Most online courses at SNHU have discussion assignments as a big part of your grade. Here are 5 of our favorite tips for helping you max out the points you earn on your assignments.",
+          src: "https://play.vidyard.com/k979SNAq46DCBwGFT1Z7Re.jpg",
+          id: "k979SNAq46DCBwGFT1Z7Re",
+          href: "https://www.snhu.edu/student-portal",
+           buttonTitle: "Go to Bookstore"
+        },
+        {
+  title: "How to Get Good Grades at SNHU?",
+  description: "For every assignment you have, the rubric is a document that tells you what criteria your instructor will use to grade your work. The rubric is key to your success.",
+  src: "https://play.vidyard.com/7h6p6NTg6AWkSnUrjmbx8P.jpg",
+  id: "7h6p6NTg6AWkSnUrjmbx8P",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+{
+  title: "How much time should I spend in each course?",
+  description: "",
+  src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
+  id: "QfFhgNfRnTUT9wT3fCWH6Q",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+{
+  title: "Protect your academic integrity (avoiding plagiarism and contract cheating)",
+  description: "At SNHU, academic integrity is crucial to both your reputation and ours. Here are four resources to make it easier for you to steer clear of academic integrity issues.",
+  src: "https://play.vidyard.com/JP3WwFRU3pxhiM7oDPdBbq.jpg",
+  id: "JP3WwFRU3pxhiM7oDPdBbq",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+{
+  title: "When should I reach out to my instructor?",
+  description: "",
+  src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
+  id: "AVsq5yvPPixPRGjDXbGHRL",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+
+{
+  title: "Sync Brightspace to your personal calendar",
+  description: "",
+  src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
+  id: "EB4trUDncjWU8CseKQ1rPb",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+
+{
+  title: "Complete your First Year Experience course",
+  description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
+  src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
+  id: "zFjSnctrPkck33KwWoBiXB",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+      ],
+
+      TutoringVideos: [{
+  title: "Complete your First Year Experience course",
+  description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
+  src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
+  id: "zFjSnctrPkck33KwWoBiXB",
+  href: "https://www.snhu.edu/student-portal",
+  buttonTitle: "Go to Bookstore"
+},
+
+
+]
+    };
+
+    // More efficient data structure with container mapping
+    const videoSections = {
+      LoginVideos: { data: videoData.LoginVideos, containerId: 'loginGallery' },
+      CourseVideos: { data: videoData.CourseVideos, containerId: 'CourseGallery' },
+      PlanningVideos: { data: videoData.PlanningVideos, containerId: 'PlanningGallery' },
+      TutoringVideos: { data: videoData.TutoringVideos, containerId: 'TutoringGallery' }
+    };
+
+    // Initialize all sections efficiently
+    document.addEventListener('DOMContentLoaded', function() {
+      renderAllSections();
+    });
+
+    function renderAllSections(searchTerm = '') {
+      Object.values(videoSections).forEach(section => {
+        const container = document.getElementById(section.containerId);
+        if (!container) return;
+        
+        container.innerHTML = '';
+        
+        const videosToShow = searchTerm 
+          ? section.data.filter(video =>
+              video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              video.description.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+          : section.data;
+          
+        videosToShow.forEach(video => {
+          createVideoElement(container, video);
+        });
+      });
+    }
+
+    function createVideoElement(container, video) {
+      const videoElement = document.createElement('div');
+      videoElement.classList.add('col-md-4');
+      videoElement.innerHTML = `
+<div class="card flex-fill mb-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; border: none;">
+  <img src="${video.src}" data-uuid="${video.id}" class="vidyard-player-embed" alt="..." style="border-radius: 20px 20px 0 0; height: 15rem; width: 100%; object-fit: cover;">
+  <div class="card-body">
+    <h5 style="font-family: Open Sans; font-weight: 700; font-size: 16px; line-height: 130%; color: #00244E;">
+      ${video.title}
+    </h5> 
+    <p class="card-text" style="font-family: Open Sans; font-weight: 400; font-size: 13px; line-height: 130%;">
+      ${video.description}
+    </p>
+    <a style="font-family: Open Sans; font-weight: 700; font-size: 15px; line-height: 130%;" class="btn-primary btn text-center" href="${video.href}" target="_blank">
+      ${video.buttonTitle}
+    </a>
+  </div>
+</div>`;
+      container.appendChild(videoElement);
+    }
+
+    // Debounce search for better performance
+    let searchTimeout;
+    function filterData(searchTerm) {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        renderAllSections(searchTerm);
+      }, 300); // Wait 300ms after user stops typing
+    }
+
+
+
+  </script>

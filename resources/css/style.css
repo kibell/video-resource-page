@@ -220,4 +220,26 @@ a {
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.hero {
+  background: url("https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/d90949c9-b995-43a1-8e4a-97eb312769bc.png") no-repeat center center/cover;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.welcome {
+  background-color: #00244e;
+  padding: 3rem;
+  border-radius: 0 2.5rem 0 2.5rem;
+  color: #fff;
+}
+
+.vidyard-player-container {
+  border-radius: 20px 20px 0 0;
+  height: 15rem !important;
+}
+
+.card-body {
+  height: 14rem;
 }/*# sourceMappingURL=style.css.map */
