@@ -123,19 +123,19 @@
     </div>
   </section>
 
-    <div style="position: relative;" class="align-items-center d-flex justify-content-center">
-        <input style="width: 500px; border-radius: 5px;  
+  <div style="position: relative;" class="align-items-center d-flex justify-content-center">
+    <input style="width: 500px; border-radius: 5px;  
                       background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 8px center;
                       background-size: 16px 16px;
-                      padding-left: 40px;" type="text" id="searchInput" class="search-on py-2 mt-5" oninput="filterData(this.value)"
-          placeholder="Search">
-      </div>
+                      padding-left: 40px;" type="text" id="searchInput" class="search-on py-2 mt-5"
+      oninput="filterData(this.value)" placeholder="Search">
+  </div>
 
-  <section class="video-content col-md-12" >
+  <section class="video-content col-md-12">
     <div class="">
 
 
-    
+
 
 
       <!-- <div class="mt-5 col-md-12 d-flex justify-content-center input-group" id="buttonContainer">
@@ -167,76 +167,128 @@
 
       <!----Log in -->
       <section>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12">
-            <h2>How to Log In</h2>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>How to Log In</h2>
+            </div>
+          </div>
+          <div class="row" id="loginGallery">
+            <!-- Cards will be inserted here -->
           </div>
         </div>
-        <div class="row" id="loginGallery">
-          <!-- Cards will be inserted here -->
-        </div>
-      </div>
-</section>
-
-    <!---Books and Course materials-->  
-<section class="bg-lightgray py-5">
-    <div class="container mt-5">
-        <div class="row">
-          <div class="col-12">
-            <h2>Books and Course Materials</h2>
-          </div>
-        </div>
-        <div class="row" id="CourseGallery">
-          <!-- Cards will be inserted here -->
-        </div>
-      </div>
       </section>
 
-       <!---Planning, Studying and Success-->  
-<section class=" py-5">
-    <div class="container mt-5">
-        <div class="row">
-          <div class="col-12">
-            <h2>Planning, Studying and Success</h2>
+      <!---Books and Course materials-->
+      <section class="bg-lightgray py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>Books and Course Materials</h2>
+            </div>
+          </div>
+          <div class="row" id="CourseGallery">
+            <!-- Cards will be inserted here -->
           </div>
         </div>
-        <div class="row" id="PlanningGallery">
-          <!-- Cards will be inserted here -->
-        </div>
-      </div>
       </section>
 
-      
-       <!---Tutoring and Support Teams-->  
-<section class="bg-lightgray py-5">
-    <div class="container mt-5">
-        <div class="row">
-          <div class="col-12">
-            <h2>Tutoring and Support Teams</h2>
+      <!---Planning, Studying and Success-->
+      <section class=" py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>Planning, Studying and Success</h2>
+            </div>
+          </div>
+          <div class="row" id="PlanningGallery">
+            <!-- Cards will be inserted here -->
           </div>
         </div>
-        <div class="row" id="TutoringGallery">
-          <!-- Cards will be inserted here -->
+      </section>
+
+
+      <!---Tutoring and Support Teams-->
+      <section class="bg-lightgray py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>Tutoring and Support Teams</h2>
+            </div>
+          </div>
+          <div class="row" id="TutoringGallery">
+            <!-- Cards will be inserted here -->
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!---Tuition and Financial Aid-->
+      <section class="py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>Tuition and Financial Aid</h2>
+            </div>
+          </div>
+          <div class="row" id="TuitionGallery">
+            <!-- Cards will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!---Hype Me Up-->
+      <section class="py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2>Hype Me Up Videos</h2>
+            </div>
+          </div>
+          <div class="row" id="HypeGallery">
+            <!-- Cards will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+        <!---Ask Abby-->
+      <section class="py-5">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">Step-by-step guides from someone who knows the ropes</h2>
+            </div>
+          </div>
+          <div class="row" id="AskAbbyGallery">
+            <!-- Image will be first, then cards will follow -->
+            <div class="col-md-4 mb-4 ask-abby-image">
+              <img src="https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/0eb95986-bb53-467d-adf7-5176cbbfd698.png" 
+                   alt="SNHU was with me every step of the way" 
+                   class="img-fluid w-100 rounded" 
+                   style="object-fit: cover;">
+            </div>
+            <!-- Cards will be inserted here and continue the col-md-4 pattern -->
+          </div>
+        </div>
       </section>
     </div>
-    </div>  
+    </div>
   </section>
-  
+
   <script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
   <script>
     // Inline JSON data for videos
     const videoData = {
+
+      // Log In JSON
+
       LoginVideos: [
         {
           title: "How to set (and reset) your SNHU single sign-on password",
           description: "When you receive the email with your single sign-on username, the first thing to do is to create your password by clicking the link to the SNHU password reset page.",
           src: "https://play.vidyard.com/ztt6T1BwZLg632fyJwzpER.jpg",
           id: "ztt6T1BwZLg632fyJwzpER",
-          href: "https://www.snhu.edu/student-portal",
-           buttonTitle: "Set Password"
+          href: "https://cloud.dream.snhu.edu/create-your-sso?vysfid=0033l000031NP7YAAWl",
+          buttonTitle: "Set Password"
         },
         {
           title: "How to log in to mySNHU",
@@ -244,7 +296,7 @@
           src: "https://play.vidyard.com/Q7nvsTXQQ55tNPBXGA14zE.jpg",
           id: "Q7nvsTXQQ55tNPBXGA14zE",
           href: "https://learn.snhu.edu",
-           buttonTitle: "Go to mySNHU"
+          buttonTitle: "Go to mySNHU"
         },
         {
           title: "How to log into the SNHU financial aid forms portal",
@@ -252,9 +304,17 @@
           src: "https://play.vidyard.com/szdxpWPFJVMcNy9zCwr8a1.jpg",
           id: "szdxpWPFJVMcNy9zCwr8a1",
           href: "https://www.snhu.edu",
-           buttonTitle: "Go to mySNHU"
+          buttonTitle: "Go to mySNHU"
         },
-          {
+        {
+  title: "How to log in to mySNHU — your virtual campus",
+  description: "Here, you'll find links to the Brightspace learning platform, academic support and important information and contacts. It's smart to bookmark mySNHU on all your devices.",
+  src: "https://play.vidyard.com/Q7nvsTXQQ55tNPBXGA14zE.jpg",
+  id: "Q7nvsTXQQ55tNPBXGA14zE",
+  href: "https://video.snhu.edu/watch/Q7nvsTXQQ55tNPBXGA14zE",
+  buttonTitle: "Go to MySNHU"
+},
+        {
           title: "How to log in to your SNHU webmail",
           description: "If you’ve been asked to access your webmail prior to registering for classes, you can do so by visiting SSO-MAIL.SNHU.EDU and entering your single sign-on username and password.",
           src: "https://play.vidyard.com/DB2WTW8nZpJUFKT7bUmqRk.jpg",
@@ -262,33 +322,43 @@
           href: "https://www.snhu.edu",
           buttonTitle: "Go to mySNHU"
         },
-         {
+        {
           title: "How to log in to SNHU Brightspace learning platform",
           description: "The SNHU Brightspace learning platform is where you’ll find, complete and submit your assignments. You’ll also have access to free academic support and tutoring.",
           src: "https://play.vidyard.com/RCRgrDktyvxmtEeNPLc8LU.jpg",
           id: "RCRgrDktyvxmtEeNPLc8LU",
-          href: "https://www.snhu.edu",
+          href: "https://my.snhu.edu/my.policy",
           buttonTitle: "Go to mySNHU"
         },
-      
+        {
+  title: "How to preview your courses in Brightspace",
+  description: "Brightspace is the learning platform where all your coursework happens — and it’s available to you 24/7 wherever you have an internet connection.",
+  src: "https://play.vidyard.com/Ytj27d32UPzk1iuhnzG3jP.jpg",
+  id: "Ytj27d32UPzk1iuhnzG3jP",
+  href: "https://video.snhu.edu/watch/Ytj27d32UPzk1iuhnzG3jP",
+  buttonTitle: "Go to Brightspace"
+},
+
       ],
+
+      // Book and Course Materials JSON
       CourseVideos: [
 
-       {
+        {
           title: "How do I buy my books?",
           description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
           src: "https://play.vidyard.com/1Z5dKCDBufkMwJT2K5Gh4R.jpg",
           id: "1Z5dKCDBufkMwJT2K5Gh4R",
           href: "https://www.snhu.edu/student-portal",
-           buttonTitle: "Go to Bookstore"
+          buttonTitle: "Go to Bookstore"
         },
-         {
+        {
           title: "Where Are My E-Books (Ask Abby!)",
           description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
           src: "https://play.vidyard.com/pQvQJwMGPFAtzK7LnoXRfW.jpg",
           id: "pQvQJwMGPFAtzK7LnoXRfW",
           href: "https://www.snhu.edu/student-portal",
-           buttonTitle: "Go to Bookstore"
+          buttonTitle: "Go to Bookstore"
         },
 
         {
@@ -297,82 +367,235 @@
           src: "https://play.vidyard.com/oDwUqFeYcjUFEmH6Nc2Bgo.jpg",
           id: "oDwUqFeYcjUFEmH6Nc2Bgo",
           href: "https://www.snhu.edu/student-portal",
-           buttonTitle: "Go to Bookstore"
+          buttonTitle: "Go to Bookstore"
         },
         
+
+
       ],
+
+      //Planning, Studying and Success JSON
       PlanningVideos: [
+
+      {
+  title: "Our #1 tip for success: Map out your week",
+  description: "Trust us. Mapping out your week help you to balance school, work and life.",
+  src: "https://play.vidyard.com/NDSZkoYqypYvFxjiyQB77d.jpg",
+  id: "NDSZkoYqypYvFxjiyQB77d",
+  href: "https://secure.vidyard.com/organizations/3527886/players/NDSZkoYqypYvFxjiyQB77d",
+  buttonTitle: "Go to Brightspace"
+},
+{
+  title: "What do I do during my first week at SNHU?",
+  description: "",
+  src: "https://play.vidyard.com/RgSPV4rzggFWiCBf1B1nKP.jpg",
+  id: "RgSPV4rzggFWiCBf1B1nKP",
+  href: "https://video.snhu.edu/watch/RgSPV4rzggFWiCBf1B1nKP",
+  buttonTitle: ""
+},
+ {
+          title: "How much time should I spend in each course?",
+          description: "",
+          src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
+          id: "QfFhgNfRnTUT9wT3fCWH6Q",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+
+          {
+          title: "How to Get Good Grades at SNHU?",
+          description: "For every assignment you have, the rubric is a document that tells you what criteria your instructor will use to grade your work. The rubric is key to your success.",
+          src: "https://play.vidyard.com/7h6p6NTg6AWkSnUrjmbx8P.jpg",
+          id: "7h6p6NTg6AWkSnUrjmbx8P",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+
         {
           title: "Five Techniques for Crushing Discussion Assignments",
           description: "Most online courses at SNHU have discussion assignments as a big part of your grade. Here are 5 of our favorite tips for helping you max out the points you earn on your assignments.",
           src: "https://play.vidyard.com/k979SNAq46DCBwGFT1Z7Re.jpg",
           id: "k979SNAq46DCBwGFT1Z7Re",
           href: "https://www.snhu.edu/student-portal",
-           buttonTitle: "Go to Bookstore"
+          buttonTitle: "Go to Bookstore"
         },
         {
-  title: "How to Get Good Grades at SNHU?",
-  description: "For every assignment you have, the rubric is a document that tells you what criteria your instructor will use to grade your work. The rubric is key to your success.",
-  src: "https://play.vidyard.com/7h6p6NTg6AWkSnUrjmbx8P.jpg",
-  id: "7h6p6NTg6AWkSnUrjmbx8P",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+  title: "How to preview your courses in Brightspace",
+  description: "Brightspace is the learning platform where all your coursework happens — and it’s available to you 24/7 wherever you have an internet connection.",
+  src: "https://play.vidyard.com/Ytj27d32UPzk1iuhnzG3jP.jpg",
+  id: "Ytj27d32UPzk1iuhnzG3jP",
+  href: "https://video.snhu.edu/watch/Ytj27d32UPzk1iuhnzG3jP",
+  buttonTitle: "Go to Brightspace"
+},
+  {
+          title: "Complete your First Year Experience course",
+          description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
+          src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
+          id: "zFjSnctrPkck33KwWoBiXB",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+      
+       
+        {
+          title: "Protect your academic integrity (avoiding plagiarism and contract cheating)",
+          description: "At SNHU, academic integrity is crucial to both your reputation and ours. Here are four resources to make it easier for you to steer clear of academic integrity issues.",
+          src: "https://play.vidyard.com/JP3WwFRU3pxhiM7oDPdBbq.jpg",
+          id: "JP3WwFRU3pxhiM7oDPdBbq",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+        {
+          title: "When should I reach out to my instructor?",
+          description: "",
+          src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
+          id: "AVsq5yvPPixPRGjDXbGHRL",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+
+        {
+          title: "Sync Brightspace to your personal calendar",
+          description: "",
+          src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
+          id: "EB4trUDncjWU8CseKQ1rPb",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+
+      
+      ],
+
+      //Tutoring and Support JSON
+
+      TutoringVideos: [
+        {
+  title: "Meet your SNHU coach, mentor and BFF",
+  description: "Your academic advisor will be your first contact for choosing courses, expanding your SNHU support network and helping you through daily ups and downs. Add them to your contacts!",
+  src: "https://play.vidyard.com/hZwVN1FEXUSFA7eQg92y6q.jpg",
+  id: "hZwVN1FEXUSFA7eQg92y6q",
+  href: "https://video.snhu.edu/watch/hZwVN1FEXUSFA7eQg92y6q",
+  buttonTitle: "Call Your Advisor 877.591.4723"
 },
 {
-  title: "How much time should I spend in each course?",
-  description: "",
-  src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
-  id: "QfFhgNfRnTUT9wT3fCWH6Q",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+  title: "SNHU career support starts on Day One",
+  description: "Our career services team will work with you to identify and work toward your career goals. Make an appointment with them during your first term.",
+  src: "https://play.vidyard.com/LziXTZVDTZWenXZjYz6W9F.jpg",
+  id: "LziXTZVDTZWenXZjYz6W9F",
+  href: "https://video.snhu.edu/watch/LziXTZVDTZWenXZjYz6W9F",
+  buttonTitle: "Go to Career Services"
 },
 {
-  title: "Protect your academic integrity (avoiding plagiarism and contract cheating)",
-  description: "At SNHU, academic integrity is crucial to both your reputation and ours. Here are four resources to make it easier for you to steer clear of academic integrity issues.",
-  src: "https://play.vidyard.com/JP3WwFRU3pxhiM7oDPdBbq.jpg",
-  id: "JP3WwFRU3pxhiM7oDPdBbq",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+  title: "Be smart — make use of free 24/7 tutoring",
+  description: "Whether it’s for math, statistics, writing or any other subject, our SNHU academic support team LOVES to help people with their homework.",
+  src: "https://play.vidyard.com/xfveBiaJNShGn4GCrbih2W.jpg",
+  id: "xfveBiaJNShGn4GCrbih2W",
+  href: "https://video.snhu.edu/watch/xfveBiaJNShGn4GCrbih2W",
+  buttonTitle: "Go to Academic Support"
 },
 {
-  title: "When should I reach out to my instructor?",
-  description: "",
-  src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
-  id: "AVsq5yvPPixPRGjDXbGHRL",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+  title: "Take advantage of FREE mental health counseling and wellness resources",
+  description: "We created the SNHU HelpU program to provide students with free, confidential, in-the-moment support to help manage life's challenges while in college.",
+  src: "https://play.vidyard.com/xMJLNsWx2DGyex33soiY63.jpg",
+  id: "xMJLNsWx2DGyex33soiY63",
+  href: "https://video.snhu.edu/watch/xMJLNsWx2DGyex33soiY63",
+  buttonTitle: "Go to Health and Wellness Resources"
 },
 
-{
-  title: "Sync Brightspace to your personal calendar",
-  description: "",
-  src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
-  id: "EB4trUDncjWU8CseKQ1rPb",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
-},
 
+      ],
+
+      //Tuition and Financial Aid JSON
+      TuitionVideos: [{
+  title: "Your own personal college finance counselor",
+  description: "When you connect with an SNHU student finance counselor, you’ll have someone who will get to know your specific situation and help you find ways to make college as affordable as possible.",
+  src: "https://play.vidyard.com/v1Q3xKocmiH5RDY6WV9rbo.jpg",
+  id: "v1Q3xKocmiH5RDY6WV9rbo",
+  href: "https://video.snhu.edu/watch/v1Q3xKocmiH5RDY6WV9rbo",
+  buttonTitle: "Go to Student Financial Services"
+},
 {
-  title: "Complete your First Year Experience course",
-  description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
-  src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
-  id: "zFjSnctrPkck33KwWoBiXB",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+  title: "How to review and understand your financial aid offer",
+  description: "Before reviewing your financial aid offer, please watch the video.",
+  src: "https://play.vidyard.com/MxBAthno4ofp2RwQqeahxg.jpg",
+  id: "MxBAthno4ofp2RwQqeahxg",
+  href: "https://video.snhu.edu/watch/MxBAthno4ofp2RwQqeahxg",
+  buttonTitle: "More Tips for Reviewing Financial Aid Offer"
+},
+{
+  title: "What is the Free Application for Federal Student Aid (FAFSA)?",
+  description: "If you’ll be paying for your college education, there’s a good chance you’ve heard someone mention the FAFSA. But exactly what is it, and how can it help you pay for your education? This video is a great introduction.",
+  src: "https://play.vidyard.com/JFbPZ5FsBoukc1WiEGo2J1.jpg",
+  id: "JFbPZ5FsBoukc1WiEGo2J1",
+  href: "https://secure.vidyard.com/organizations/4180621/players/JFbPZ5FsBoukc1WiEGo2J1",
+  buttonTitle: "Go to FAFSA"
 },
       ],
 
-      TutoringVideos: [{
-  title: "Complete your First Year Experience course",
-  description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
-  src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
-  id: "zFjSnctrPkck33KwWoBiXB",
-  href: "https://www.snhu.edu/student-portal",
-  buttonTitle: "Go to Bookstore"
+      // Hype me up JSON
+      HypeVideos: [{
+  title: "SNHU was with me every step of the way",
+  description: "Since 1932, SNHU’s mission has been to expand access to high-quality, affordable education. Hear from some of our many first-generation college graduates about the power of earning a degree from SNHU.",
+  src: "https://play.vidyard.com/UFnLjCaS9xZzXrmWasPzfX.jpg",
+  id: "UFnLjCaS9xZzXrmWasPzfX",
+  href: "https://video.snhu.edu/watch/UFnLjCaS9xZzXrmWasPzfX",
+  buttonTitle: ""
+},
+{
+  title: "We love our first-generation college students!",
+  description: "Since 1932, SNHU’s mission has been to expand access to high-quality, affordable education. Hear from some of our many first-generation college graduates about the power of earning a degree from SNHU.",
+  src: "https://play.vidyard.com/3bJZdITsuCM.jpg",
+  id: "3bJZdITsuCM",
+  href: "https://youtu.be/3bJZdITsuCM",
+  buttonTitle: ""
+},
+{
+  title: "Save money with these discounts for SNHU students",
+  description: "From free Microsoft 365 software to discounts on clothing, travel, events and online music, here are some of our favorite discounts available to SNHU students.",
+  src: "https://play.vidyard.com/xXrBVUiBWxCuFXG3neqKRR.jpg",
+  id: "xXrBVUiBWxCuFXG3neqKRR",
+  href: "https://video.snhu.edu/watch/xXrBVUiBWxCuFXG3neqKRR",
+  buttonTitle: "Go to Student Discounts"
 },
 
 
-]
+      ],
+      // Ask Abby JSON
+      AskAbbyVideos: [{
+  title: "What do I do during my first week at SNHU?",
+  description: "",
+  src: "https://play.vidyard.com/RgSPV4rzggFWiCBf1B1nKP.jpg",
+  id: "RgSPV4rzggFWiCBf1B1nKP",
+  href: "https://video.snhu.edu/watch/RgSPV4rzggFWiCBf1B1nKP",
+  buttonTitle: ""
+},
+ {
+          title: "How much time should I spend in each course?",
+          description: "",
+          src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
+          id: "QfFhgNfRnTUT9wT3fCWH6Q",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+ {
+          title: "When should I reach out to my instructor?",
+          description: "",
+          src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
+          id: "AVsq5yvPPixPRGjDXbGHRL",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+        {
+          title: "Sync Brightspace to your personal calendar",
+          description: "",
+          src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
+          id: "EB4trUDncjWU8CseKQ1rPb",
+          href: "https://www.snhu.edu/student-portal",
+          buttonTitle: "Go to Bookstore"
+        },
+
+
+      ]
     };
 
     // More efficient data structure with container mapping
@@ -380,11 +603,14 @@
       LoginVideos: { data: videoData.LoginVideos, containerId: 'loginGallery' },
       CourseVideos: { data: videoData.CourseVideos, containerId: 'CourseGallery' },
       PlanningVideos: { data: videoData.PlanningVideos, containerId: 'PlanningGallery' },
-      TutoringVideos: { data: videoData.TutoringVideos, containerId: 'TutoringGallery' }
+      TutoringVideos: { data: videoData.TutoringVideos, containerId: 'TutoringGallery' },
+      TuitionVideos: { data: videoData.TuitionVideos, containerId: 'TuitionGallery' },
+      HypeVideos: { data: videoData.HypeVideos, containerId: 'HypeGallery' },
+      AskAbbyVideos: { data: videoData.AskAbbyVideos, containerId: 'AskAbbyGallery' }
     };
 
     // Initialize all sections efficiently
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       renderAllSections();
     });
 
@@ -392,26 +618,48 @@
       Object.values(videoSections).forEach(section => {
         const container = document.getElementById(section.containerId);
         if (!container) return;
-        
-        container.innerHTML = '';
-        
-        const videosToShow = searchTerm 
+
+        // Special handling for Ask Abby section to preserve the image
+        if (section.containerId === 'AskAbbyGallery') {
+          // Only remove video cards, keep the image
+          const videoCards = container.querySelectorAll('.col-md-4:not(.ask-abby-image)');
+          videoCards.forEach(card => card.remove());
+        } else {
+          container.innerHTML = '';
+        }
+
+        const videosToShow = searchTerm
           ? section.data.filter(video =>
-              video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              video.description.toLowerCase().includes(searchTerm.toLowerCase())
-            )
+            video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            video.description.toLowerCase().includes(searchTerm.toLowerCase())
+          )
           : section.data;
-          
+
         videosToShow.forEach(video => {
-          createVideoElement(container, video);
+          createVideoElement(container, video, section.containerId);
         });
       });
     }
 
-    function createVideoElement(container, video) {
+    function createVideoElement(container, video, containerId) {
       const videoElement = document.createElement('div');
-      videoElement.classList.add('col-md-4');
-      videoElement.innerHTML = `
+      
+      // Different sizing and layout for Ask Abby section
+      if (containerId === 'AskAbbyGallery') {
+        videoElement.classList.add('col-md-4');
+        videoElement.innerHTML = `
+<div class="card flex-fill mb-3" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 10px; border: none;">
+  <img src="${video.src}" data-uuid="${video.id}" class="vidyard-player-embed" alt="${video.title}" style="border-radius: 10px; width: 100%; object-fit: cover;">
+  <div class="card-body p-2" style="height: 60px !important;"
+    <h5 class="text-center" style="font-family: Open Sans; font-weight: 700; font-size: 16px; line-height: 120%; color: #00244E; margin: 0;">
+      ${video.title}
+    </h5>
+  </div>
+</div>`;
+      } else {
+        // Standard layout for other sections
+        videoElement.classList.add('col-md-4');
+        videoElement.innerHTML = `
 <div class="card flex-fill mb-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; border: none;">
   <img src="${video.src}" data-uuid="${video.id}" class="vidyard-player-embed" alt="..." style="border-radius: 20px 20px 0 0; height: 15rem; width: 100%; object-fit: cover;">
   <div class="card-body">
@@ -426,6 +674,8 @@
     </a>
   </div>
 </div>`;
+      }
+      
       container.appendChild(videoElement);
     }
 
