@@ -1,4 +1,7 @@
 <!doctype html>
+%%[
+   SET @refContent = ContentBlockByKey("9347d187-1058-4ce4-851f-f2251f6f7535")
+]%%
 <html lang="en">
 
 <head>
@@ -24,22 +27,256 @@
 
 
   <style>
+/* Font size */
+/* 18px */
+/*20 px*/
+/*24px h2 tag */
+/* 32px */
+/* 36px */
+/* 40px  h1 tag* /
+$font-size-7xl: 4rem; /*64px */
+.ink-blue {
+  color: #00244e;
+}
 
+.heritage {
+  color: #0a3370;
+}
+
+.bg-lightgray {
+  background: #F9F9F9;
+}
+
+.accordion-header {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  color: #0a3370;
+}
+
+.accordion-button.collapsed::after {
+  font-family: "FontAwesome";
+  content: "\f067";
+  font-size: 1rem;
+  color: #0a3370;
+  float: right;
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  font-family: "FontAwesome";
+  content: "\f068";
+  color: #0a3370;
+  float: right;
+  font-size: 1.25rem;
+  background-image: none;
+  transform: none;
+}
+
+.btn {
+  padding: 0.6rem 0.9rem;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #fdb913;
+  border-color: #fdb913;
+  color: #0a3370;
+}
+.btn-primary:hover {
+  background-color: #fee097;
+  border-color: #fee097;
+  color: #0a3370;
+}
+
+.btn-secondary {
+  background-color: #0a3370;
+  border-color: #0a3370;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0a3370;
+}
+
+.chat-btn {
+  position: fixed;
+  transform: rotate(-90deg);
+  right: -22px;
+  top: 70vh;
+  z-index: 1;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+}
+
+@media only screen and (max-width: 576px) {
+  .mobile-btn-w {
+    width: 100%;
+    margin-bottom: 0.275rem;
+  }
+}
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a3370;
+  font-family: "Inter", sans-serif;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.card-info-header {
+  color: #0a3370;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-paragraph {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.min-h-18 {
+  min-height: 18rem;
+}
+
+.snhu-logo-footer {
+  height: auto;
+  width: 100%;
+}
+
+footer {
+  background-color: #00244E !important;
+  color: #FFFFFF;
+}
+
+footer p, footer a {
+  color: #FFFFFF;
+}
+
+footer a {
+  font-size: 1rem;
+}
+
+footer.mobile {
+  display: none;
+}
+
+.navbar {
+  background-color: #00244e;
+}
+
+.primary-link {
+  color: #fdb913;
+  font-weight: 400 !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar > .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+h1 {
+  color: #0a3370;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #0a3370;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+}
+
+h3 {
+  color: #00244e;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+p,
+li {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a.head-link {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+a.head-link:hover,
+a.head-link:focus {
+  -webkit-text-decoration: underline #70abdb 2px;
+          text-decoration: underline #70abdb 2px;
+  text-underline-offset: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+a {
+  color: #0a3370;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  background: url("https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/d90949c9-b995-43a1-8e4a-97eb312769bc.png") no-repeat center center/cover;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.welcome {
+  background-color: #00244e;
+  padding: 3rem;
+  border-radius: 0 2.5rem 0 2.5rem;
+  color: #fff;
+}
+
+.vidyard-player-container {
+  border-radius: 20px 20px 0 0;
+  height: 15rem !important;
+}
+
+.card-body {
+  height: 14rem;
+}/*# sourceMappingURL=style.css.map */
   </style>
-  <!--[if lt IE 9]>
-        <script src="https://www.snhu.edu/assets/SNHU/js/polyfill/respond.min.js"></script>
-    <![endif]-->
-  <link rel="stylesheet" type="text/css" href="DateTimePicker.css" />
-
-  <script type="text/javascript" src="DateTimePicker.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-  <!--[if lt IE 9]>
-   <link rel="stylesheet" type="text/css" href="DateTimePicker-ltie9.css" />
-   <script type="text/javascript" src="DateTimePicker-ltie9.js"></script>
-  <![endif]-->
   <!-- FORM: HEAD SECTION -->
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -113,7 +350,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 welcome">
-          <h1 class="text-white welcome-message">“So that’s how I do it!” </span></h1>
+          <h1 class="text-white welcome-message">“So that’s how I do it!” </h1>
           <p class="text-white">Welcome to the SNHU online student video library.
             <br>
             Browse by category or search by keyword.
@@ -132,11 +369,7 @@
   </div>
 
   <section class="video-content col-md-12">
-    <div class="">
-
-
-
-
+    <div class="container-fluid">
 
       <!-- <div class="mt-5 col-md-12 d-flex justify-content-center input-group" id="buttonContainer">
         <button type="button" class="btn btn-primary active" onclick="filterData(this.value)" value=""> All </button>
@@ -162,11 +395,10 @@
         </button>
         <button type="button" class="btn btn-primary" onclick="filterData(this.value)" value="Campus Events"> Campus
           Events </button>
-
       </div> -->
 
       <!----Log in -->
-      <section id="login" class=" py-5">
+      <section id="login" class="py-5">
         <div class="container mt-5">
           <div class="row">
             <div class="col-12">
@@ -194,7 +426,7 @@
       </section>
 
       <!---Planning, Studying and Success-->
-      <section id="planning-section" class=" py-5">
+      <section id="planning-section" class="py-5">
         <div class="container mt-5">
           <div class="row">
             <div class="col-12">
@@ -206,7 +438,6 @@
           </div>
         </div>
       </section>
-
 
       <!---Tutoring and Support Teams-->
       <section id="tutoring-section" class="bg-lightgray py-5">
@@ -237,7 +468,7 @@
       </section>
 
       <!---Hype Me Up-->
-      <section id="hype-section" class="py-5">
+      <section id="hype-section" class="bg-lightgray py-5">
         <div class="container mt-5">
           <div class="row">
             <div class="col-12">
@@ -258,6 +489,7 @@
               <h2 class="text-center">Step-by-step guides from someone who knows the ropes</h2>
             </div>
           </div>
+          
           <div class="row" id="AskAbbyGallery">
             <!-- Image will be first, then cards will follow -->
             <div class="col-md-4 mb-4 ask-abby-image">
@@ -270,381 +502,194 @@
         </div>
       </section>
     </div>
-    </div>
   </section>
+   %%=v(@refContent)=%%
+   <footer class="py-5">
+      <div class="container-fluid">
+        <div class="row">
+
+           <div class="col-md-4 d-flex justify-content-center align-items-center my-3">
+            <a href="https://www.snhu.edu/" target="_blank" class="link-dark text-decoration-none">
+              <img src="https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png" height="80" alt="SNHU logo">
+            </a>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <p class="" style="color:#fff"> <strong>SNHU Admission</strong> 
+              <br>
+              <a href="Tel:8883870864" class="text-link">888.387.0864</a>
+              <br>
+              <a href="mailto:admissions@snhu.edu" class="text-link primary-link"> admissions@snhu.edu </a>
+          </p></div>
+
+           <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <p class="" style="color:#fff"> <strong>SNHU Advising</strong>
+              <br>
+              <a href="Tel:8883870864" class="text-link">877.591.4723</a>
+              <br>
+              <a href="mailto:admissions@snhu.edu" class="text-link primary-link"> advising@snhu.edu </a>
+          </p></div>
+         <hr>
+
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <p style="color: #fff;">
+              © 2025 
+              Southern New Hampshire University
+            </p>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <p style="color: #fff;">
+              View our <a href="https://www.snhu.edu/privacy-policy" class="text-link primary-link">Privacy Policy</a> 
+            </p>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <p style="color: #fff;">
+              <a href="https://www.snhu.edu/about-us/accessibility" class="text-link primary-link">Accessibility at
+                SNHU</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   <script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
   <script>
-    // Inline JSON data for videos
-    const videoData = {
+    // Global variable to store video data
+    let videoData = {};
 
-      // Log In JSON
+    // Load external JSON data
+    async function loadVideoData() {
+      try {
+        const response = await fetch('https://cloud.dream.snhu.edu/videoData.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        videoData = await response.json();
+        console.log('Video data loaded successfully');
+        
+        // Initialize the page after data is loaded
+        initializePage();
+      } catch (error) {
+        console.error('Error loading video data:', error);
+        // Fallback: You could add fallback data here if needed
+      }
+    }
 
-      LoginVideos: [
-        {
-          title: "How to set (and reset) your SNHU single sign-on password",
-          description: "When you receive the email with your single sign-on username, the first thing to do is to create your password by clicking the link to the SNHU password reset page.",
-          src: "https://play.vidyard.com/ztt6T1BwZLg632fyJwzpER.jpg",
-          id: "ztt6T1BwZLg632fyJwzpER",
-          href: "https://cloud.dream.snhu.edu/create-your-sso?vysfid=0033l000031NP7YAAWl",
-          buttonTitle: "Set Password"
-        },
-        {
-          title: "How to log in to mySNHU",
-          description: "Once you’re registered as a student at SNHU, you’ll receive access to my.snhu.edu — often referred to as “mySNHU.” Think of mySNHU as your virtual SNHU campus. Here you’ll find links to the Brightspace learning platform, academic support and tutoring, and important information and contacts.",
-          src: "https://play.vidyard.com/Q7nvsTXQQ55tNPBXGA14zE.jpg",
-          id: "Q7nvsTXQQ55tNPBXGA14zE",
-          href: "https://learn.snhu.edu",
-          buttonTitle: "Go to mySNHU"
-        },
-        {
-          title: "How to log into the SNHU financial aid forms portal",
-          description: "If SNHU is asked to obtain additional information to help determine your Federal Student Aid eligibility, our Student Financial Services team will send you an email inviting you to log in to the SNHU financial aid forms portal.",
-          src: "https://play.vidyard.com/szdxpWPFJVMcNy9zCwr8a1.jpg",
-          id: "szdxpWPFJVMcNy9zCwr8a1",
-          href: "https://www.snhu.edu",
-          buttonTitle: "Go to mySNHU"
-        },
-        {
-          title: "How to log in to mySNHU — your virtual campus",
-          description: "Here, you'll find links to the Brightspace learning platform, academic support and important information and contacts. It's smart to bookmark mySNHU on all your devices.",
-          src: "https://play.vidyard.com/Q7nvsTXQQ55tNPBXGA14zE.jpg",
-          id: "Q7nvsTXQQ55tNPBXGA14zE",
-          href: "https://video.snhu.edu/watch/Q7nvsTXQQ55tNPBXGA14zE",
-          buttonTitle: "Go to MySNHU"
-        },
-        {
-          title: "How to log in to your SNHU webmail",
-          description: "If you’ve been asked to access your webmail prior to registering for classes, you can do so by visiting SSO-MAIL.SNHU.EDU and entering your single sign-on username and password.",
-          src: "https://play.vidyard.com/DB2WTW8nZpJUFKT7bUmqRk.jpg",
-          id: "DB2WTW8nZpJUFKT7bUmqRk",
-          href: "https://www.snhu.edu",
-          buttonTitle: "Go to mySNHU"
-        },
-        {
-          title: "How to log in to SNHU Brightspace learning platform",
-          description: "The SNHU Brightspace learning platform is where you’ll find, complete and submit your assignments. You’ll also have access to free academic support and tutoring.",
-          src: "https://play.vidyard.com/RCRgrDktyvxmtEeNPLc8LU.jpg",
-          id: "RCRgrDktyvxmtEeNPLc8LU",
-          href: "https://my.snhu.edu/my.policy",
-          buttonTitle: "Go to mySNHU"
-        },
-        {
-          title: "How to preview your courses in Brightspace",
-          description: "Brightspace is the learning platform where all your coursework happens — and it’s available to you 24/7 wherever you have an internet connection.",
-          src: "https://play.vidyard.com/Ytj27d32UPzk1iuhnzG3jP.jpg",
-          id: "Ytj27d32UPzk1iuhnzG3jP",
-          href: "https://video.snhu.edu/watch/Ytj27d32UPzk1iuhnzG3jP",
-          buttonTitle: "Go to Brightspace"
-        },
+    // Initialize page after data is loaded
+    function initializePage() {
+      console.log('Initializing page with videoData:', videoData);
+      
+      // More efficient data structure with container mapping
+      const videoSections = {
+        LoginVideos: { data: videoData.LoginVideos, containerId: 'loginGallery', sectionId: 'login' },
+        CourseVideos: { data: videoData.CourseVideos, containerId: 'CourseGallery', sectionId: 'course-section' },
+        PlanningVideos: { data: videoData.PlanningVideos, containerId: 'PlanningGallery', sectionId: 'planning-section' },
+        TutoringVideos: { data: videoData.TutoringVideos, containerId: 'TutoringGallery', sectionId: 'tutoring-section' },
+        TuitionVideos: { data: videoData.TuitionVideos, containerId: 'TuitionGallery', sectionId: 'tuition-section' },
+        HypeVideos: { data: videoData.HypeVideos, containerId: 'HypeGallery', sectionId: 'hype-section' },
+        AskAbbyVideos: { data: videoData.AskAbbyVideos, containerId: 'AskAbbyGallery', sectionId: 'askabby-section' }
+      };
 
-      ],
-
-      // Book and Course Materials JSON
-      CourseVideos: [
-
-        {
-          title: "How do I buy my books?",
-          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
-          src: "https://play.vidyard.com/1Z5dKCDBufkMwJT2K5Gh4R.jpg",
-          id: "1Z5dKCDBufkMwJT2K5Gh4R",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-        {
-          title: "Where Are My E-Books (Ask Abby!)",
-          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
-          src: "https://play.vidyard.com/pQvQJwMGPFAtzK7LnoXRfW.jpg",
-          id: "pQvQJwMGPFAtzK7LnoXRfW",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-        {
-          title: "Special course materials and software",
-          description: "In most course, you’re going to have need to purchase books, e-books or other courses. This video shows you how.",
-          src: "https://play.vidyard.com/oDwUqFeYcjUFEmH6Nc2Bgo.jpg",
-          id: "oDwUqFeYcjUFEmH6Nc2Bgo",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-      ],
-
-      //Planning, Studying and Success JSON
-      PlanningVideos: [
-
-        {
-          title: "Our #1 tip for success: Map out your week",
-          description: "Trust us. Mapping out your week help you to balance school, work and life.",
-          src: "https://play.vidyard.com/NDSZkoYqypYvFxjiyQB77d.jpg",
-          id: "NDSZkoYqypYvFxjiyQB77d",
-          href: "https://secure.vidyard.com/organizations/3527886/players/NDSZkoYqypYvFxjiyQB77d",
-          buttonTitle: "Go to Brightspace"
-        },
-        {
-          title: "What do I do during my first week at SNHU?",
-          description: "",
-          src: "https://play.vidyard.com/RgSPV4rzggFWiCBf1B1nKP.jpg",
-          id: "RgSPV4rzggFWiCBf1B1nKP",
-          href: "https://video.snhu.edu/watch/RgSPV4rzggFWiCBf1B1nKP",
-          buttonTitle: ""
-        },
-        {
-          title: "How much time should I spend in each course?",
-          description: "",
-          src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
-          id: "QfFhgNfRnTUT9wT3fCWH6Q",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-        {
-          title: "How to Get Good Grades at SNHU?",
-          description: "For every assignment you have, the rubric is a document that tells you what criteria your instructor will use to grade your work. The rubric is key to your success.",
-          src: "https://play.vidyard.com/7h6p6NTg6AWkSnUrjmbx8P.jpg",
-          id: "7h6p6NTg6AWkSnUrjmbx8P",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-        {
-          title: "Five Techniques for Crushing Discussion Assignments",
-          description: "Most online courses at SNHU have discussion assignments as a big part of your grade. Here are 5 of our favorite tips for helping you max out the points you earn on your assignments.",
-          src: "https://play.vidyard.com/k979SNAq46DCBwGFT1Z7Re.jpg",
-          id: "k979SNAq46DCBwGFT1Z7Re",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-        {
-          title: "How to preview your courses in Brightspace",
-          description: "Brightspace is the learning platform where all your coursework happens — and it’s available to you 24/7 wherever you have an internet connection.",
-          src: "https://play.vidyard.com/Ytj27d32UPzk1iuhnzG3jP.jpg",
-          id: "Ytj27d32UPzk1iuhnzG3jP",
-          href: "https://video.snhu.edu/watch/Ytj27d32UPzk1iuhnzG3jP",
-          buttonTitle: "Go to Brightspace"
-        },
-        {
-          title: "Complete your First Year Experience course",
-          description: "Students who take our free orientation course are more likely to succeed in their first term. Learn how to find, complete and submit assignments. This free, optional course does NOT affect your grade.",
-          src: "https://play.vidyard.com/zFjSnctrPkck33KwWoBiXB.jpg",
-          id: "zFjSnctrPkck33KwWoBiXB",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-
-        {
-          title: "Protect your academic integrity (avoiding plagiarism and contract cheating)",
-          description: "At SNHU, academic integrity is crucial to both your reputation and ours. Here are four resources to make it easier for you to steer clear of academic integrity issues.",
-          src: "https://play.vidyard.com/JP3WwFRU3pxhiM7oDPdBbq.jpg",
-          id: "JP3WwFRU3pxhiM7oDPdBbq",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-        {
-          title: "When should I reach out to my instructor?",
-          description: "",
-          src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
-          id: "AVsq5yvPPixPRGjDXbGHRL",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-        {
-          title: "Sync Brightspace to your personal calendar",
-          description: "",
-          src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
-          id: "EB4trUDncjWU8CseKQ1rPb",
-          href: "https://www.snhu.edu/student-portal",
-          buttonTitle: "Go to Bookstore"
-        },
-
-
-      ],
-
-      //Tutoring and Support JSON
-
-      TutoringVideos: [
-        {
-          title: "Meet your SNHU coach, mentor and BFF",
-          description: "Your academic advisor will be your first contact for choosing courses, expanding your SNHU support network and helping you through daily ups and downs. Add them to your contacts!",
-          src: "https://play.vidyard.com/hZwVN1FEXUSFA7eQg92y6q.jpg",
-          id: "hZwVN1FEXUSFA7eQg92y6q",
-          href: "https://video.snhu.edu/watch/hZwVN1FEXUSFA7eQg92y6q",
-          buttonTitle: "Call Your Advisor 877.591.4723"
-        },
-        {
-          title: "SNHU career support starts on Day One",
-          description: "Our career services team will work with you to identify and work toward your career goals. Make an appointment with them during your first term.",
-          src: "https://play.vidyard.com/LziXTZVDTZWenXZjYz6W9F.jpg",
-          id: "LziXTZVDTZWenXZjYz6W9F",
-          href: "https://video.snhu.edu/watch/LziXTZVDTZWenXZjYz6W9F",
-          buttonTitle: "Go to Career Services"
-        },
-        {
-          title: "Be smart — make use of free 24/7 tutoring",
-          description: "Whether it’s for math, statistics, writing or any other subject, our SNHU academic support team LOVES to help people with their homework.",
-          src: "https://play.vidyard.com/xfveBiaJNShGn4GCrbih2W.jpg",
-          id: "xfveBiaJNShGn4GCrbih2W",
-          href: "https://video.snhu.edu/watch/xfveBiaJNShGn4GCrbih2W",
-          buttonTitle: "Go to Academic Support"
-        },
-        {
-          title: "Take advantage of FREE mental health counseling and wellness resources",
-          description: "We created the SNHU HelpU program to provide students with free, confidential, in-the-moment support to help manage life's challenges while in college.",
-          src: "https://play.vidyard.com/xMJLNsWx2DGyex33soiY63.jpg",
-          id: "xMJLNsWx2DGyex33soiY63",
-          href: "https://video.snhu.edu/watch/xMJLNsWx2DGyex33soiY63",
-          buttonTitle: "Go to Health and Wellness Resources"
-        },
-
-
-      ],
-
-      //Tuition and Financial Aid JSON
-      TuitionVideos: [{
-        title: "Your own personal college finance counselor",
-        description: "When you connect with an SNHU student finance counselor, you’ll have someone who will get to know your specific situation and help you find ways to make college as affordable as possible.",
-        src: "https://play.vidyard.com/v1Q3xKocmiH5RDY6WV9rbo.jpg",
-        id: "v1Q3xKocmiH5RDY6WV9rbo",
-        href: "https://video.snhu.edu/watch/v1Q3xKocmiH5RDY6WV9rbo",
-        buttonTitle: "Go to Student Financial Services"
-      },
-      {
-        title: "How to review and understand your financial aid offer",
-        description: "Before reviewing your financial aid offer, please watch the video.",
-        src: "https://play.vidyard.com/MxBAthno4ofp2RwQqeahxg.jpg",
-        id: "MxBAthno4ofp2RwQqeahxg",
-        href: "https://video.snhu.edu/watch/MxBAthno4ofp2RwQqeahxg",
-        buttonTitle: "More Tips for Reviewing Financial Aid Offer"
-      },
-      {
-        title: "What is the Free Application for Federal Student Aid (FAFSA)?",
-        description: "If you’ll be paying for your college education, there’s a good chance you’ve heard someone mention the FAFSA. But exactly what is it, and how can it help you pay for your education? This video is a great introduction.",
-        src: "https://play.vidyard.com/JFbPZ5FsBoukc1WiEGo2J1.jpg",
-        id: "JFbPZ5FsBoukc1WiEGo2J1",
-        href: "https://secure.vidyard.com/organizations/4180621/players/JFbPZ5FsBoukc1WiEGo2J1",
-        buttonTitle: "Go to FAFSA"
-      },
-      ],
-
-      // Hype me up JSON
-      HypeVideos: [{
-        title: "SNHU was with me every step of the way",
-        description: "Since 1932, SNHU’s mission has been to expand access to high-quality, affordable education. Hear from some of our many first-generation college graduates about the power of earning a degree from SNHU.",
-        src: "https://play.vidyard.com/UFnLjCaS9xZzXrmWasPzfX.jpg",
-        id: "UFnLjCaS9xZzXrmWasPzfX",
-        href: "https://video.snhu.edu/watch/UFnLjCaS9xZzXrmWasPzfX",
-        buttonTitle: ""
-      },
-      {
-        title: "We love our first-generation college students!",
-        description: "Since 1932, SNHU’s mission has been to expand access to high-quality, affordable education. Hear from some of our many first-generation college graduates about the power of earning a degree from SNHU.",
-        src: "https://play.vidyard.com/3bJZdITsuCM.jpg",
-        id: "3bJZdITsuCM",
-        href: "https://youtu.be/3bJZdITsuCM",
-        buttonTitle: ""
-      },
-      {
-        title: "Save money with these discounts for SNHU students",
-        description: "From free Microsoft 365 software to discounts on clothing, travel, events and online music, here are some of our favorite discounts available to SNHU students.",
-        src: "https://play.vidyard.com/xXrBVUiBWxCuFXG3neqKRR.jpg",
-        id: "xXrBVUiBWxCuFXG3neqKRR",
-        href: "https://video.snhu.edu/watch/xXrBVUiBWxCuFXG3neqKRR",
-        buttonTitle: "Go to Student Discounts"
-      },
-
-
-      ],
-      // Ask Abby JSON
-      AskAbbyVideos: [{
-        title: "What do I do during my first week at SNHU?",
-        description: "",
-        src: "https://play.vidyard.com/RgSPV4rzggFWiCBf1B1nKP.jpg",
-        id: "RgSPV4rzggFWiCBf1B1nKP",
-        href: "https://video.snhu.edu/watch/RgSPV4rzggFWiCBf1B1nKP",
-        buttonTitle: ""
-      },
-      {
-        title: "How much time should I spend in each course?",
-        description: "",
-        src: "https://play.vidyard.com/QfFhgNfRnTUT9wT3fCWH6Q.jpg",
-        id: "QfFhgNfRnTUT9wT3fCWH6Q",
-        href: "https://www.snhu.edu/student-portal",
-        buttonTitle: "Go to Bookstore"
-      },
-      {
-        title: "When should I reach out to my instructor?",
-        description: "",
-        src: "https://play.vidyard.com/AVsq5yvPPixPRGjDXbGHRL.jpg",
-        id: "AVsq5yvPPixPRGjDXbGHRL",
-        href: "https://www.snhu.edu/student-portal",
-        buttonTitle: "Go to Bookstore"
-      },
-      {
-        title: "Sync Brightspace to your personal calendar",
-        description: "",
-        src: "https://play.vidyard.com/EB4trUDncjWU8CseKQ1rPb.jpg",
-        id: "EB4trUDncjWU8CseKQ1rPb",
-        href: "https://www.snhu.edu/student-portal",
-        buttonTitle: "Go to Bookstore"
-      },
-
-
-      ]
-    };
-
-    // More efficient data structure with container mapping
-    const videoSections = {
-      LoginVideos: { data: videoData.LoginVideos, containerId: 'loginGallery', sectionId: 'login' },
-      CourseVideos: { data: videoData.CourseVideos, containerId: 'CourseGallery', sectionId: 'course-section' },
-      PlanningVideos: { data: videoData.PlanningVideos, containerId: 'PlanningGallery', sectionId: 'planning-section' },
-      TutoringVideos: { data: videoData.TutoringVideos, containerId: 'TutoringGallery', sectionId: 'tutoring-section' },
-      TuitionVideos: { data: videoData.TuitionVideos, containerId: 'TuitionGallery', sectionId: 'tuition-section' },
-      HypeVideos: { data: videoData.HypeVideos, containerId: 'HypeGallery', sectionId: 'hype-section' },
-      AskAbbyVideos: { data: videoData.AskAbbyVideos, containerId: 'AskAbbyGallery', sectionId: 'askabby-section' }
-    };
-
-    // Initialize all sections efficiently
-    document.addEventListener('DOMContentLoaded', function () {
+      // Store videoSections globally for use in other functions
+      window.videoSections = videoSections;
+      
+      console.log('Video sections created:', videoSections);
+      
+      // Render all sections
       renderAllSections();
+    }
+
+    // Load data when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      loadVideoData();
     });
 
     function renderAllSections(searchTerm = '') {
-      Object.values(videoSections).forEach(section => {
+      if (!window.videoSections) return; // Wait for data to load
+
+      Object.values(window.videoSections).forEach(section => {
         const container = document.getElementById(section.containerId);
         const sectionElement = document.getElementById(section.sectionId);
         if (!container || !sectionElement) return;
 
-        // Special handling for Ask Abby section to preserve the image
-        if (section.containerId === 'AskAbbyGallery') {
-          // Only remove video cards, keep the image
-          const videoCards = container.querySelectorAll('.col-md-4:not(.ask-abby-image), .col-md-2:not(.ask-abby-image)');
-          videoCards.forEach(card => card.remove());
-        } else {
-          container.innerHTML = '';
+        // If no search term, show all videos and sections
+        if (!searchTerm) {
+          // Show the section
+          sectionElement.style.display = 'block';
+          
+          // Show all video cards in this section
+          const allCards = container.querySelectorAll('.col-md-4, .col-md-2');
+          allCards.forEach(card => {
+            // Skip the ask-abby-image which should always be visible
+            if (!card.classList.contains('ask-abby-image')) {
+              card.style.display = 'block';
+            }
+          });
+          
+          // If container is empty, render all videos
+          if (container.children.length === 0 || (section.containerId === 'AskAbbyGallery' && container.querySelectorAll('.col-md-4:not(.ask-abby-image)').length === 0)) {
+            // Special handling for Ask Abby section to preserve the image
+            if (section.containerId === 'AskAbbyGallery') {
+              // Only remove video cards, keep the image
+              const videoCards = container.querySelectorAll('.col-md-4:not(.ask-abby-image), .col-md-2:not(.ask-abby-image)');
+              videoCards.forEach(card => card.remove());
+            } else {
+              container.innerHTML = '';
+            }
+            
+            section.data.forEach(video => {
+              createVideoElement(container, video, section.containerId, section.sectionId, video.type, video.displayBtn);
+            });
+          }
+          return;
         }
 
-        const videosToShow = searchTerm
-          ? section.data.filter(video =>
-            video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            video.description.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-          : section.data;
+        // Search functionality - hide/show existing cards instead of recreating
+        const allCards = container.querySelectorAll('.col-md-4, .col-md-2');
+        let hasVisibleVideos = false;
+        
+        allCards.forEach(card => {
+          // Skip the ask-abby-image which should always be visible
+          if (card.classList.contains('ask-abby-image')) {
+            return;
+          }
+          
+          // Get the title and description from the card
+          const titleElement = card.querySelector('h5');
+          const descriptionElement = card.querySelector('p, .card-text');
+          
+          const title = titleElement ? titleElement.textContent.toLowerCase() : '';
+          const description = descriptionElement ? descriptionElement.textContent.toLowerCase() : '';
+          
+          const searchLower = searchTerm.toLowerCase();
+          const matches = title.includes(searchLower) || description.includes(searchLower);
+          
+          if (matches) {
+            card.style.display = 'block';
+            hasVisibleVideos = true;
+          } else {
+            card.style.display = 'none';
+          }
+        });
 
-        // Hide section if no videos to show during search
-        if (searchTerm && videosToShow.length === 0) {
+        // Hide section if no videos match during search
+        if (!hasVisibleVideos) {
           sectionElement.style.display = 'none';
         } else {
           sectionElement.style.display = 'block';
-          videosToShow.forEach(video => {
-            createVideoElement(container, video, section.containerId);
-          });
         }
       });
+      
+      // Reinitialize Vidyard players after rendering
+      setTimeout(() => {
+        if (window.VidyardV4 && window.VidyardV4.api) {
+          window.VidyardV4.api.renderDOMPlayers();
+        }
+      }, 100);
     }
 
-    function createVideoElement(container, video, containerId, sectionID) {
+    function createVideoElement(container, video, containerId, sectionID, type, displayBtn) {
       const videoElement = document.createElement('div');
 
       // Different sizing and layout for Ask Abby section
@@ -653,18 +698,20 @@
         videoElement.innerHTML = `
 <div class="card flex-fill mb-3" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 10px; border: none;">
   <img src="${video.src}" data-uuid="${video.id}" class="vidyard-player-embed" alt="${video.title}" style="border-radius: 10px; width: 100%; object-fit: cover;">
-  <div class="card-body p-2" style="height: 60px !important;"
+  <div class="card-body p-2" style="height: 60px !important;">
     <h5 class="text-center" style="font-family: Open Sans; font-weight: 700; font-size: 16px; line-height: 120%; color: #00244E; margin: 0;">
       ${video.title}
     </h5>
   </div>
 </div>`;
-      } else {
-        // Standard layout for other sections
+      } 
+
+      if (type === 'youtube') {
+        // Layout for YouTube videos
         videoElement.classList.add('col-md-4');
         videoElement.innerHTML = `
 <div class="card flex-fill mb-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; border: none;">
-  <img src="${video.src}" data-uuid="${video.id}" class="vidyard-player-embed" alt="..." style="border-radius: 20px 20px 0 0; height: 15rem; width: 100%; object-fit: cover;">
+  <iframe src="${video.src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px 20px 0 0; height: 15rem; width: 100%; object-fit: cover;"></iframe>
   <div class="card-body">
     <h5 style="font-family: Open Sans; font-weight: 700; font-size: 16px; line-height: 130%; color: #00244E;">
       ${video.title}
@@ -672,14 +719,41 @@
     <p class="card-text" style="font-family: Open Sans; font-weight: 400; font-size: 13px; line-height: 130%;">
       ${video.description}
     </p>
-    <a style="font-family: Open Sans; font-weight: 700; font-size: 15px; line-height: 130%;" class="btn-primary btn text-center" href="${video.href}" target="_blank">
+    ${displayBtn ? `<a style="font-family: Open Sans; font-weight: 700; font-size: 15px; line-height: 130%;" class="btn-primary btn text-center" href="${video.href}" target="_blank">
       ${video.buttonTitle}
-    </a>
+    </a>` : ''}
+  </div>
+</div>`;
+      } else {
+        // Standard layout for other sections
+        videoElement.classList.add('col-md-4');
+        videoElement.innerHTML = `
+<div class="card flex-fill mb-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; border: none;">
+  <img style="border-radius: 20px 20px 0 0; height: 15rem; width: 100%; object-fit: cover;" class="vidyard-player-embed" src="${video.src}" data-uuid="${video.id}" data-v="4" data-type="inline"  />
+  <div class="card-body">
+    <h5 style="font-family: Open Sans; font-weight: 700; font-size: 16px; line-height: 130%; color: #00244E;">
+      ${video.title}
+    </h5> 
+    <p class="card-text" style="font-family: Open Sans; font-weight: 400; font-size: 13px; line-height: 130%;">
+      ${video.description}
+    </p>
+    ${displayBtn ? `<a style="font-family: Open Sans; font-weight: 700; font-size: 15px; line-height: 130%;" class="btn-primary btn text-center" href="${video.href}" target="_blank">
+      ${video.buttonTitle}
+    </a>` : ''}
   </div>
 </div>`;
       }
 
       container.appendChild(videoElement);
+      
+      // Reinitialize Vidyard players for dynamically added content
+      if (window.VidyardV4 && window.VidyardV4.api) {
+        window.VidyardV4.api.addReadyListener(function(data) {
+          // Player is ready
+        });
+        // Tell Vidyard to scan for new players
+        window.VidyardV4.api.renderDOMPlayers();
+      }
     }
 
     // Debounce search for better performance
